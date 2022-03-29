@@ -1,0 +1,15 @@
+package com;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DbConnection {
+
+	public static Connection dbConn() throws ClassNotFoundException, SQLException {
+	   	 Class.forName("com.mysql.jdbc.Driver");
+	   	 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:8080/Products","root"," ");
+	   	 return con;
+	    }
+
+}

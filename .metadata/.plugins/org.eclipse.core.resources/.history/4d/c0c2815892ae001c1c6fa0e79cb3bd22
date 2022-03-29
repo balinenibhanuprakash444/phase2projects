@@ -1,0 +1,22 @@
+package com;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.Metadata;
+public class HibernateUtil {
+	  private static final SessionFactory sessionFactory;
+
+      static {
+              try {
+                      StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
+                                      .configure("hibernate.cfg.xml").build();
+                      Metadata metaData = new MetadataSources().getMetadataBuilder().build();
+                      sessionFactory = ((Session) metaData).getSessionFactoryBuilder().build();
+              } catch (Throwable th) {
+                      throw new ExceptionInInitializerError(th);
+              }
+      }
+
+      public static SessionFactory getSessionFactory() {
+              return sessionFactory;
+      }
+}

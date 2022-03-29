@@ -1,0 +1,26 @@
+package com.ecommerce;
+
+import org.apache.catalina.core.StandardService;
+
+import com.mysql.cj.xdevapi.SessionFactory;
+
+public class HibernateUtil {
+
+
+    private static final SessionFactory sessionFactory;
+
+    static {
+            try {
+                    StandardService standardRegistry = ((receiver) new StandardService())"
+                                    .configure("hibernate.cfg.xml").build();
+                    Metadata metaData = new MetadataSources(standardRegistry).getMetadataBuilder().build();
+                    sessionFactory = metaData.getSessionFactoryBuilder().build();
+            } catch (Throwable th) {
+                    throw new ExceptionInInitializerError(th);
+            }
+    }
+
+    public static SessionFactory getSessionFactory() {
+            return sessionFactory;
+    }
+}

@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Enter Product Details</h1>
+<hr>
+<form  action="insert">
+    
+  <ul>
+   <li>
+     <label for="name">Product Id:</label><br>
+     <input type="text" name="productid" id="productid" value="" />
+   </li>
+  <li>
+   <label for="email">Product name</label><br>
+   <input type="text" name="productname" id="productname" value="" />
+   </li>
+   <li>
+  <label for="comments">Product Price:</label><br>
+  <textarea id="productprice" name="productprice" cols="10" rows="3"></textarea>
+  </li>
+ <li>
+  <input type="submit" value="submit" />
+   <input type="reset" value="reset" />
+   </li>
+    </ul>
+</form>
+
+</body>
+</html>

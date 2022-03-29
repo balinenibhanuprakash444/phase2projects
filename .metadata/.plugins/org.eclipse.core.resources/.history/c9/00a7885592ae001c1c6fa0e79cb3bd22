@@ -1,0 +1,10 @@
+package com;
+
+public class StandardServiceRegistryBuilder {
+
+	String Object configure(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

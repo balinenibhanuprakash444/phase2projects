@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1 style="color:green" align="center" >Welcome To WebApp></h1>
+<br/>
+<h2 align="center">You are On Dashboard</h2>
+<h3 align="center"><a href="Logout">  Logout  </a></h3>
+
+</body>
+</html>
